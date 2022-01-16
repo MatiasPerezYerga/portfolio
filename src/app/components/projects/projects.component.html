@@ -1,0 +1,27 @@
+<!---->
+<!---->
+
+	<h2 class="titleProject"> Proyectos </h2>
+<div >
+	
+	<table class= " table table-bordered" >
+
+		<tr  valign="top" *ngFor="let project of projects" class="project">
+			<div *ngIf="!project">
+				Cargando...
+			</div>
+					<a class="links" [routerLink]="['/proyecto',project._id]">
+			   			 <img src="{{project.image}}" *ngIf="project.image" class="thumbnails"/></a><!--con 
+			    	el ngiF , significal que la uliza si esta listada--->
+				<code>
+				<h4><b>{{project.name}}</b></h4>
+				<p>{{project.category}}</p>
+				<p>{{project.langs}}</p>
+				<p>{{project.year}}</p>
+     		  </code>  	
+		 </tr>	
+	
+	</table>
+	
+</div>
+
