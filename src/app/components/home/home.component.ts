@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
     this.web= "Portfolio.com/mpy"
     this.sttatus="false";
     this.confirm=false;
+     _CargarScripts.Carga(["capa/jquery-3.6.0"]);
     _CargarScripts.Carga(["capa/capa"]);  
    }
 

@@ -1195,7 +1195,8 @@ width: 20%;
 /*------------------*/
 
 @media (min-width:400px) and (max-width:740px) {
- body{ background-size: 400%;
+ body{ background-size: 450% ;
+
 font-size: 15px;
  }
    
