@@ -9,6 +9,7 @@
 	src:  url("fonts/Rockstar-ExtraBold.otf");
 }
 
+
 @font-face{
 	font-family: "Poppins";
 	src:  url("fonts/Poppins.ttf");
@@ -18,23 +19,23 @@
 	font-family: "TheHound";
 	src:  url("fonts/TheHound.ttf");
 }
-
+/*
 @font-face{
 	font-family: "WhiteDream";
 	src:  url("fonts/WhiteDream.otf");
 }
-
+*/
 
 @font-face{
 	font-family: "Among";
 	src:  url("fonts/aAmongYou.otf");
 }
-
+/*
 @font-face{
 	font-family: "Angota";
 	src:  url("fonts/aAnggota.otf");
 }
-
+*/
 @font-face{
 	font-family: "AreaKilometer50";
 	src:  url("fonts/aAreaKilometer50.otf");
@@ -67,18 +68,16 @@ src:  url("fonts/TESLA.ttf") ;
 
 /*Luego en el body llamamos  al stylo por su nombre*/
 body{
-	font-family: Poppins;
+	/*font-family: Poppins;*/
 	color:  white;
 	font-size: 20px;
-	background-color: rgba(15,15,15,0.7);
 	
-/*background-image:  url("");	*/
- /*background-image:  url("https://c.tenor.com/WSnMZt-dXKUAAAAC/programming-programando.gif");*/
-/*background-image:  url("https://64.media.tumblr.com/2d0af9c90d1b1107313cc20bda01548a/tumblr_outwxnanpp1u79o2lo1_1280.gifv");*/
- background-image:  url("https://i.pinimg.com/originals/db/03/96/db039626bfa2ecc53f0f6e7f335aef4c.gif");
-  /*background-image:  url("img/gif28.gif");*/
-/*background-image:  url("https://imgur.com/a/Ln5CqMC");*/
-   background-size: 100%;
+	
+	background-image:  url("../img/compute2.png") ;
+	background-image: ;
+    
+    
+   	background-size: 100%;
 	background-attachment: fixed;
 
 
@@ -86,7 +85,7 @@ body{
 	text-align: left;
 	
 }
-/*En los estilos generales creamos una clase para limpiar los flot entre los distintos elementos*/
+/*En los estilos generales creamos una clase para limpiar los float entre los distintos elementos*/
 .clearfix{
 	float: none;
 	clear: both;
@@ -107,14 +106,15 @@ header{
 		/*background: rgba(0, 0, 0,1);*/
 		text-align: center;
 		padding-top: 0px;
-		position:  fixed;
+		position:   fixed;
 		text-transform: uppercase;
 		border-radius: ;
 		align-content: center;
 		/*background-image:  url("img/gif26.gif");*/
-		background-size: 20%;
+		
 		background-color: black;
-
+		
+	z-index: 50px;
 ;
 		
 
@@ -278,7 +278,7 @@ border-left: 2px solid #b7b7b7;
 border-right: 2px solid #b7b7b7;
 border-top: 2px solid #b7b7b7;
 border-bottom: 2px solid #b7b7b7;
-background:  rgba(0,0,0,.8);
+background:  rgba(0,0,0,0.90);
 margin-top: 70px;
 padding-top: 90px;
 
@@ -479,13 +479,6 @@ margin-left:0% ;
   display:none;
    
 }
-
-
-div .loading {
-width: 35%;
-
-}
-
 
              
 
@@ -794,6 +787,13 @@ font-family: "Rockstar-ExtraBold";
 border-bottom: 1px solid;
 }
 
+.loading {
+width: 30%;
+margin-left: 35%;
+
+}
+
+
 .project{/**/
 list-style:none ; /*para que no muestre los puntitos de la lista*/
 display: inline-block;/**/
@@ -867,14 +867,14 @@ transition:all .5s ease-in-out;
 /***************/
 /* RESPONSIVE  */
 /***************/
-
+/*------max 400px------*/
 @media (max-width:400px) {
- body{ background-size: 400%;}
+ body{ background-size: 100%;}
    
 header {
 	width: 100%;
  height: 110px;
-
+	z-index: 50px;
 }	
 
 .btn {
@@ -896,7 +896,7 @@ header ul li{
 font-size: 20px;
 text-align: left;
 margin-top: 50%;
-margin-left: 10% }
+margin-left: 5% }
 
 #title h1{
 
@@ -989,7 +989,11 @@ font-size: 20px;
 margin-left: -5%;
 }
 
+.loading {
+width: 100%;
+margin-left: 0%;
 
+}
 
 .project{
 	display: block;
@@ -1044,15 +1048,15 @@ font-size: 15px;
 
 }
 
-/*------------------*/
+/*------768------------*/
 
 @media (width:768px)   {
-body{ background-size: 400%;}
+body{ background-size: 100%;}
    
 header {
 	width: 100%;
  height: 200px;
-
+	z-index: 50px;
 }	
 
 .btn {
@@ -1167,6 +1171,12 @@ font-size: 20px;
 margin-left: -5%;
 }
 
+.loading {
+width: 100%;
+margin-left: 0%;
+
+}
+
 .project{
 	display: block;
 width: 90%;
@@ -1192,10 +1202,10 @@ width: 20%;
 
 
 
-/*------------------*/
+/*----------MIN 400 px a 740 px--------*/
 
 @media (min-width:400px) and (max-width:740px) {
- body{ background-size: 450% ;
+ body{ background-size: 100% ;
 
 font-size: 15px;
  }
@@ -1204,6 +1214,7 @@ header {
 
 		width: 100%;
  		height: 110px;
+ 			z-index: 50px;
 }	
 
 .btn {
@@ -1308,9 +1319,12 @@ font-size: 20px;
 	margin-top: 0%;
 }
 
+
 .listasAbout{
 	margin-left: -5%;
 }
+
+
 .langs{
 margin-left: -5%;
 }
@@ -1320,6 +1334,14 @@ margin-left: -5%;
 width: 90%;
 margin-left: -0%;
 }
+
+
+.loading{
+width: 90%;
+margin-left: 10%;
+
+
+}	
 
 .socialContact{
 	margin-left: -0%;
@@ -1369,14 +1391,14 @@ font-size: 15px;
 
 @media (min-width: 740px) and (max-width:1000px)   {
 
-body{ background-size: 400%;
+body{ background-size: 100%;
 font-size: 20px;
  }
    
 header {
 	width: 100%;
- height: 170px;
-
+	height: 170px;
+ 	z-index: 50px;
 }	
 
 .btn {
@@ -1473,6 +1495,12 @@ font-size: 20px;
 margin-left: -5%;
 }
 
+.loading {
+width: 50%;
+margin-left: 25%;
+
+}
+
 .project{
 	display: inline-block;
 width: 45%;
@@ -1527,18 +1555,20 @@ font-size: 15px;
 }
 
 
-/*----  1024px ------*/
+/*----  Min 1024px  Max 1279px ------*/
 @media (min-width:1024px) and (max-width: 1279px)  {
  
-body{ background-size: 200%;
+body{ background-size: 100%;
 font-size: 20px;
  }
    
 header {
 	width: 100%;
- height: 200px;
+ 	height: 200px;
+ 		z-index: 50px;
 
 }	
+
 
 .btn {
 	font-size: 20px;
@@ -1549,7 +1579,7 @@ header ul li{
 	display: inline-block;
 	display: left;
 	text-align: left;
-	margin-top:0%;
+	margin-top:-2%;
 	margin-bottom: -10%;
 	margin-left: 0%;
 }
@@ -1647,6 +1677,11 @@ font-size: 20px;
 margin-left: -5%;
 }
 
+.loading {
+width: 50%;
+margin-left: 25%;
+}
+
 .project{
 	display: inline-block;
 width: 20%;
@@ -1706,10 +1741,11 @@ font-size: 15px;
 
 /*---- LANSCAPE 736 px ------*/
 @media (max-width:736px) and (orientation:landscape) {
- body{ background-size: 200%;}
+ body{ background-size: 100%;}
  header {
 	width: 100%;
  height: 125px;
+ 	z-index: 50px;
 
 }	
 
@@ -1831,6 +1867,14 @@ margin-left: 0%;
 font-size: 20px;
 }
 
+
+
+.loading{
+
+width: 60%;
+margin-left: 20%;
+}
+
 .socialContact{
 	margin-left: 30%;
 }
@@ -1886,18 +1930,20 @@ body{
 }
 
 /*--------------------------*/
-/*-- RANGO 1024px a 1440px--*/
+/*-- RANGO 1280px a 1919px--*/
 /*--------------------------*/
 @media (min-width:1280px) and (max-width:1919px)  {
  
-body{ background-size: 150%;
+body{ background-size: 100%;
 font-size: 20px;
  }
    
 header {
+	
 	width: 100%;
- height: 175px;
-
+ 	height: 175px;
+	margin-top: -5%;
+	z-index: 50px;
 }	
 
 .btn {
@@ -1919,9 +1965,9 @@ header ul li{
 }
 
 .perfil{
-width: 13%;
-margin-left: 15%;
-margin-top: 0%;
+width: 10%;
+margin-left: 23%;
+margin-top: 3%;
 }
 
 .perfil:hover{
@@ -1959,15 +2005,19 @@ margin-left: -;
 font-size: 55px;
 }
 
+#content {
+	margin-top:-2%
+}
+
 #title h1{
 	font-size:  30px;
 	margin-left: 40%;
 }
 
 #title h2{
-font-size: 40px;
+font-size: 45px;
 text-align: center;
-margin-top: -0%;
+margin-left: -5%;
 
 }
 
@@ -2005,6 +2055,12 @@ font-size: 20px;
 }
 .langs{
 margin-left: -5%;
+}
+
+.loading {
+width: 40%;
+margin-left: 30%;
+
 }
 
 .project{
@@ -2068,11 +2124,11 @@ font-size: 15px;
 
 
 /*--------------------------*/
-/*-- RANGO min 1920px a 1440px--*/
+/*-- RANGO min 1920px --*/
 /*--------------------------*/
 @media (min-width:1920px)   {
  
-body{ background-size: 113%;
+body{ background-size: 100%;
 font-size: 20px;
 
  }
@@ -2080,7 +2136,7 @@ font-size: 20px;
 header {
 	width: 100%;
  height: 175px;
-
+	z-index: 50px;
 }	
 
 .btn {
@@ -2102,13 +2158,13 @@ header ul li{
 }
 
 .perfil{
-width: 10%;
+width: 9%;
 margin-left: 25%;
 margin-top: 0%;
 }
 
 .perfil:hover{
-	transform: scale(1.5,1.5);
+	transform: scale(1.3,1.3);
 }
 img.social1{
 
@@ -2146,7 +2202,7 @@ display: ;
 #title h2{
 font-size: 60px;
 text-align: center;
-margin-top: -0%;
+margin-left: -7%;
 
 }
 

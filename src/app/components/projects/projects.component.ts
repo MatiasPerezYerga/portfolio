@@ -17,6 +17,7 @@ import { Global } from '../../services/global';//para sacar la  url de la api
 })
 export class ProjectsComponent implements OnInit {
   public projects: Project[]=[]; //este array publica es la que tendran los objetos JSON.
+
 public url: string;
 //
   constructor(
@@ -34,7 +35,7 @@ public url: string;
 
 
   getProjects(){
-
+    
     this._projectService.getProjects().subscribe( //subsicribimos al observable y leemos la respuesta que nos lee por la api
       response => {//primera funcion de callback
         if(response.projects){
