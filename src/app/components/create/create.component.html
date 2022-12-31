@@ -1,0 +1,55 @@
+<div class="container" *ngIf="project"> <!-- -->
+	<h2 class="titleProject">{{title}}</h2><!--con la almohadilla le pone nombre -->
+<!-- -->
+
+	<div class="message succes" *ngIf="status =='success'">
+		El proyecto se ha creado correctamente, puedes <a [routerLink]="['/proyecto',save_project._id]"> verlo aquí </a>
+	</div>
+
+	<!-- -->
+<div class="message failed" *ngIf="status =='failed'" >
+		Ha fallado la creación!
+	</div >
+	<code>
+		<form  class="Formulario" #projectForm="ngForm" (ngSubmit)= "onSubmit(projectForm)"><!-- le paso el project form como parametro-->
+			<p><!--con el evento ngSubmit captura lo que envia el formulario-->
+				<label for ="name">Nombre</label>
+				<input type="text" name="name" #name="ngModel"[(ngModel)]="project.name" required/> <br><!--[(ngModel)]="project.name" 2 ways data binding para modificar el atributo name del project-->
+				<!-- el # indica que es la identificacion para Angular-->
+				<span class="form_error"*ngIf="name.touched && !name.valid">El nombre es obligatorio</span>
+				
+				
+				<label for ="description">Descripción</label>
+				<textarea name="description" #description="ngModel"[(ngModel)]="project.description" required><br></textarea>
+				<span class="form_errorDescription" *ngIf="description.touched && !description.valid">La descripcion es obligatoria.</span>
+				<!-- -->
+					
+
+
+				<label for ="category">Categoria</label>
+				<input type="text" name="category" #category="ngModel"[(ngModel)]="project.category" required/><!-- --><br>
+				<span class="form_error" *ngIf="category.touched && !category.valid">La categoria es obligatoria.</span>
+
+
+				<label for ="year">Año de lanzamiento</label>
+				<input type="number" name="year" #year="ngModel"[(ngModel)]="project.year"/><br>
+
+
+				<label for ="langs">Lenguajes o Tecnologias usadas </label>
+				<input type="text" name="langs" #langs="ngModel"[(ngModel)]="project.langs" required/><br>
+				<span class="form_error" *ngIf="langs.touched && !langs.valid">Los lenguajes o tecnologías son necesarias.</span>
+			</p>
+			
+<p>
+	<label for="image"> Imagen del proyecto </label>
+	<input type="file" class="subirImg" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)"/> <!--Evento change que cuando hacemos un cambio
+		en un input, lanza otro metodo que tengamos en nuestro componente.
+	$event la variable que se pasa va a tener (evento) todos los  datos que haya caputrado ese input (nombre, datos etc)-->
+	<br>
+	<input type="submit" value="Enviar" [disabled]="!projectForm.form.valid"/> <!--boton de envio -->
+</p>
+		</form>
+		</code>
+</div>
+<!-- -->
+
